@@ -18,24 +18,24 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.shape.RoundedCornerShape
 
-// Define brown-white color palettes
+
 private val DarkColorScheme = darkColorScheme(
-    primary = Color(0xFF8D6E63),    // Brown 400
+    primary = Color(0xFF8D6E63),
     onPrimary = Color.White,
-    secondary = Color(0xFFD7CCC8),  // Light brown
-    onSecondary = Color(0xFF3E2723),// Dark Brown
-    background = Color(0xFF3E2723), // Dark Brown background
+    secondary = Color(0xFFD7CCC8),
+    onSecondary = Color(0xFF3E2723),
+    background = Color(0xFF3E2723),
     onBackground = Color.White,
-    surface = Color(0xFF5D4037),     // Brown 600
+    surface = Color(0xFF5D4037),
     onSurface = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Color(0xFF795548),     // Brown 500
+    primary = Color(0xFF795548),
     onPrimary = Color.White,
-    secondary = Color(0xFFFFF8E1),   // Light cream
-    onSecondary = Color(0xFF3E2723), // Dark Brown text
-    background = Color(0xFFFFFDF9),  // Creamy white
+    secondary = Color(0xFFFFF8E1),
+    onSecondary = Color(0xFF3E2723),
+    background = Color(0xFFFFFDF9),
     onBackground = Color(0xFF3E2723),
     surface = Color.White,
     onSurface = Color(0xFF3E2723)
@@ -44,7 +44,7 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun CodeLabTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
