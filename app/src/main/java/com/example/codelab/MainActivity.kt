@@ -25,9 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.codelab.ui.CodeLabTheme
 import android. content. res. Configuration. UI_MODE_NIGHT_YES
-import com.example.codelab.ui.LightBlue
-import androidx.core.graphics.toColorInt
-
+import androidx.compose.ui.graphics.toArgb
 
 @Suppress("DEPRECATION")
 class MainActivity : ComponentActivity() {
@@ -37,12 +35,12 @@ class MainActivity : ComponentActivity() {
 
 
         window.apply {
-            window.statusBarColor = "#BBDEFB".toColorInt()
+            window.statusBarColor = Color(0xFF795548).toArgb()
             clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         }
 
         setContent {
-            CodeLabTheme {
+            CodeLabTheme() {
                 MyApp(modifier = Modifier.fillMaxSize())
             }
         }
